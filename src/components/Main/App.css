@@ -1,0 +1,129 @@
+#appbar{
+    background-color: #F8F9F9;
+    height: 60px;
+  }
+  
+  #bartext{
+    color:black;
+  }
+  
+  #searchbar{
+    /* background-color: black; */
+    width: 750px;
+    height: 30px;
+    color:black;
+    border: 1px solid;
+  }
+  
+  #iconbar{
+    color: black;
+  }
+  
+  .icons8-stack-overflow { 
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIKdmlld0JveD0iMCAwIDQ4IDQ4IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxwYXRoIGZpbGw9IiM2MDdEOEIiIGQ9Ik05IDI4SDEyVjQySDl6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzYwN0Q4QiIgZD0iTTkgMzlIMzVWNDJIOXoiPjwvcGF0aD48cGF0aCBmaWxsPSIjNjA3RDhCIiBkPSJNMzIgMjhIMzVWNDJIMzJ6TTE1IDM0SDI5VjM3SDE1eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNBNjhBNkUiIGQ9Ik0xNC44OCAyOUgyOC44ODAwMDAwMDAwMDAwMDNWMzJIMTQuODh6IiB0cmFuc2Zvcm09InJvdGF0ZSg2LjE0MiAyMS44OCAzMC41KSI+PC9wYXRoPjxwYXRoIGZpbGw9IiNFRjZDMDAiIGQ9Ik0yOS40NTIgMTEuNjQ2SDQzLjQ1MVYxNC42NDdIMjkuNDUyeiIgdHJhbnNmb3JtPSJyb3RhdGUoODEuMjM0IDM2LjQ1MyAxMy4xNDgpIj48L3BhdGg+PHBhdGggZmlsbD0iI0ZGOTgwMCIgZD0iTTIzLjU3NiAxMy41NzhIMzcuNTc0VjE2LjU3OUgyMy41NzZ6IiB0cmFuc2Zvcm09InJvdGF0ZSg2MC43OSAzMC41NzYgMTUuMDc5KSI+PC9wYXRoPjxwYXRoIGZpbGw9IiNEMzhCMjgiIGQ9Ik0xOC4zOTUgMTguMjc1SDMyLjM5M1YyMS4yNzZIMTguMzk1eiIgdHJhbnNmb3JtPSJyb3RhdGUoMzQuNzY1IDI1LjM5NiAxOS43NzcpIj48L3BhdGg+PHBhdGggZmlsbD0iI0MwOTU1MyIgZD0iTTE1Ljk3NyAyMy40OTlIMjkuOTc2VjI2LjVIMTUuOTc3eiIgdHJhbnNmb3JtPSJyb3RhdGUoMTkuNzg1IDIyLjk3OCAyNS4wMDMpIj48L3BhdGg+PC9zdmc+') 50% 50% no-repeat;
+    background-size: 100%; }
+  
+  
+  #foot{
+    background-color: #232629;
+    color: #F8F9F9;
+    padding-left: 90px;
+    padding-top: 30px;
+  }
+  
+  #firstcard{
+    padding: 80px; 
+  }
+  
+  #cardbutton{
+    padding-left: 40px;
+  }
+  
+  #firstcardHome1{
+    background-color: #FEE3CD;
+    border-radius: 10px;
+  }
+  
+  #firstcardHome2{
+    background-color: #9FCEFE;
+    border-radius: 10px;
+  }
+  
+  #secondHome{
+    padding-left: 300px;
+    background-color: #34383C;
+    height: 400px;
+    align-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 15px;
+  }
+  
+  #developer{
+    padding-left: 60px;
+  }
+  
+  #thirdHome{
+    padding-left: 80px;
+  }
+  
+  #secondCard{
+    padding-left: 250px;
+  }
+  
+  #smallcut{
+    background-color: #232629;
+    height: 450px;
+    margin-left:40px;
+    margin-right: 40px;
+    border-radius: 15px;
+  }
+  
+  #cardfour{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  #aboutfirstcard{
+    padding-left: 40px;
+    padding-right: 150px;
+    padding-top: 40px;
+  }
+  
+  #aboutsecondcard{
+    padding-left: 150px;
+    padding-right: 10px;
+    margin-top: 100px;
+  }
+  
+  #aboutthirdcard{
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  
+  #signin{
+    padding-left: 180px;
+    padding-right: 90px;
+  }
+  
+  #signup{
+    padding-left: 180px;
+    padding-right: 90px;
+    padding-bottom: 50px;
+  }
+
+  #askform{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    background-color: #dededf;
+
+    
+  }
+  
