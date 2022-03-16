@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 const Login = () => {
-  const [data, setData] = useState({ email: "", password: "" });
+  const [data, setData] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
 
   const handleChange = ({ currentTarget: input }) => {
@@ -38,9 +38,9 @@ const Login = () => {
             <input
               type="email"
               placeholder="Email"
-              name="email"
+              name="username"
               onChange={handleChange}
-              value={data.email}
+              value={data.username}
               required
               className={styles.input}
             />
