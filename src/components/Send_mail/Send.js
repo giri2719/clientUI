@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 export default function Send() {
   const [data, setData] = useState({ username: "" });
+  const [newData, setNew] = useState({ username: "", password: "" });
+  const [temp, setTemp] = useState("");
   const [show, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [code, setCode] = useState(0);
-  const [temp, setTemp] = useState("");
 
   const helloHandeler = () => {
     setLoading(true);
@@ -21,12 +23,35 @@ export default function Send() {
     setData({ ...data, [name]: value });
   };
 
+  const handleTemp = (e) => {
+    const { name, value } = e.target;
+    setTemp(value);
+  };
+
+  const handlePassword = (e) => {
+    const { name, value } = e.target;
+    if (temp === value) {
+      setNew({ ...newData, username: data.username, [name]: value });
+    } else {
+      setError("confirm password not matched");
+    }
+  };
+
+  const PasswordSubmit = async (e) => {
+    e.preventDefault();
+    await axios
+      .put("https://ag-giri.herokuapp.com/users/9", newData)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => setError("server busy"));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:40001/users/forget", data)
+      .post("https://ag-giri.herokuapp.com/users/forget", data)
       .then((res) => {
-        setTemp(data);
         setError(res.data.msg);
         setCode(res.data.code);
         setData("");
@@ -58,13 +83,14 @@ export default function Send() {
                 </button>
               </form>
             ) : (
-              <form className={styles.form_container}>
+              <form className={styles.form_container} onSubmit={PasswordSubmit}>
                 <h1>Create password</h1>
                 <input
                   type="password"
                   placeholder="new password"
                   name="newpassword"
-                  value={""}
+                  value={temp}
+                  onChange={handleTemp}
                   required
                   className={styles.input}
                 />
@@ -72,61 +98,20 @@ export default function Send() {
                   type="password"
                   placeholder="confirm password"
                   name="password"
+                  onChange={handlePassword}
                   required
                   className={styles.input}
                 />
-                <button type="submit" className={styles.green_btn}>
-                  Submit
-                </button>
+                <Link to="/login">
+                  <button type="button" className={styles.green_btn}>
+                    Submit
+                  </button>
+                </Link>
               </form>
             )}
           </div>
         </div>
       </div>
-
-      {/* <div
-        className="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-body">
-              {show ? (
-                <>
-                  <div className="text-center">
-                    <div
-                      className="spinner-border"
-                      style={style}
-                      role="status"
-                    ></div>
-
-                    <p>waiting...</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="text-center">
-                    <h2>{error}</h2>
-                  </div>
-                </>
-              )}
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }
